@@ -1,6 +1,6 @@
 ---
 title: mastery
-output: oldbookdown::html_chapter
+output: html_document
 bibliography: references.bib
 ---
 

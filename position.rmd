@@ -1,6 +1,6 @@
 ---
 title: position
-output: oldbookdown::html_chapter
+output: html_document
 ---
 
 ```{r position, include = FALSE}

@@ -1,5 +1,5 @@
 ---
-output: oldbookdown::html_chapter
+output: html_document
 bibliography: references.bib
 ---
 
@@ -682,7 +682,9 @@ These sources all generate spatial data frames defined by the sp package. You ca
 
 ```{r}
 library(USAboundaries)
-c18 <- us_boundaries(as.Date("1820-01-01"))
+library(sf)
+c18 <- us_boundaries(as.Date("1820-01-01")) # incorporated https://github.com/hadley/ggplot2-book/issues/133
+c18 <- as(c18, "Spatial")
 c18df <- fortify(c18)
 head(c18df)
 
