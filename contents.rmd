@@ -1,0 +1,44 @@
+```{r chapterNames, echo=F, message=F}
+i.chpter = 1
+chpName = c('Introduction', 
+            'Getting started with ggplot2',
+            'Toolbox',
+            'Mastering the grammar',
+            'Build a plot layer by layer',
+            'Scales, axes and legends',
+            'Positioning',
+            'Themes')
+files = c('introduction', 'ggplot', 'toolbox', 
+          'mastery', 'layers', 'scales', 
+          'position', 'themes', 'data-manip', 
+          'tidy-data', 'modelling', 'programming')
+```
+
+## Contents
+
+### Part I. Getting started
+
+1. [Introduction](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+2. [Getting started with ggplot2](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+3. [Toolbox](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+
+### Part II. Grammar
+
+4. [Mastering the grammar](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+5. [Build a plot layer by layer](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+6. [Scales, axes and legends](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+7. [Positioning](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+8. [Themes](`r paste0('./',files[i.chpter],'.html')`) `r i.chpter=i.chpter+1`
+
+### Part III. Data Analysis
+
+9.
+10.
+11.
+12.
+
+
+
+
+
+

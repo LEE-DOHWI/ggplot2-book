@@ -1,0 +1,79 @@
+---
+title: "readme"
+author: "KwH Kim"
+date: "2018년 10월 17일"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+repository name = **ggplot2-book**
+
+branch name = **html**
+
+Here is the code for installing packages. You need to install at least these pakcages.
+```{r pack, eval=F}
+# dependencies
+install.packages('maps')
+install.packages('directlabels')
+install.packages('sf')
+install.packages('USAboundariesData', 
+                 repos='http://packages.ropensci.org', 
+                 type = 'source')
+install.packages('wesanderson')
+install.packages('mapproj')
+install.packages('ggthemes')
+install.packages('Lahman')
+```
+
+```{r chapterNames, message=F}
+i.chpter = 1
+chpName = c('Introduction', 
+            'Getting started with ggplot2',
+            'Toolbox',
+            'Mastering the grammar',
+            'Build a plot layer by layer',
+            'Scales, axes and legends',
+            'Positioning',
+            'Themes',
+            'Data Analysis',
+            'Data transformation',
+            'Modelling for visualization',
+            'Programming with ggplot2')
+files = c('introduction', 'ggplot', 'toolbox', 
+          'mastery', 'layers', 'scales', 
+          'position', 'themes', 'data-manip', 
+          'tidy-data', 'modelling', 'programming')
+```
+
+
+## Contents
+|no   |name   |rmd   |html |
+|---|---|---|---|
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`|
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+|`r i.chpter`  |`r chpName[i.chpter]`   |`r file.exists(paste0(files[i.chpter],'.rmd'))`   |`r file.exists(paste0(files[i.chpter],'.html'))` `r i.chpter = i.chpter+1`| 
+
+Trying to render `.html`
+
+```{r rmdRender, error=T}
+library(rmarkdown)
+
+for (i in seq_along(files)) {
+  if (!file.exists(paste0(files[i],'.html'))) {
+    cat(paste('Rendering ', paste0(files[i],'.html')), '\n')
+    rmarkdown::render(paste0(files[i],'.rmd'))
+  }
+}
+```
+
+
+
+
